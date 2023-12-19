@@ -18,21 +18,12 @@ namespace gitApiProject.Controllers
 
         // POST api/<StringController>
         [HttpPost]
-        public List<string> Post( string value)
+        public List<string> Post(string value)
         {
             MyStrings.s.Add(value);
             return MyStrings.s;
         }
 
-      
-
-        // PUT api/<StringController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        
-        }
     }
+}
 
