@@ -13,7 +13,14 @@ namespace gitApiProject.Controllers
         {
             return new string[] { "value1", "value2" };
         }
+        // DELETE api/<StringController>/5
+        [HttpDelete("{str}")]
+        public List<string> Delete(string str)
+        {
 
+            MyStrings.s.Remove(MyStrings.s.FirstOrDefault(st => st == str));
+            return MyStrings.s;
+        }
         // POST api/<StringController>
         [HttpPost]
         public List<string> Post(string value)
