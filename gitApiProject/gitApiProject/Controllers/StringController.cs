@@ -21,6 +21,13 @@ namespace gitApiProject.Controllers
             MyStrings.s.Remove(MyStrings.s.FirstOrDefault(st => st == str));
             return MyStrings.s;
         }
+        // POST api/<StringController>
+        [HttpPost]
+        public List<string> Post(string value)
+        {
+            MyStrings.s.Add(value);
+            return MyStrings.s;
+        }
     }
 }
 
