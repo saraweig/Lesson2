@@ -14,8 +14,6 @@ namespace gitApiProject.Controllers
             return new string[] { "value1", "value2" };
         }
 
-
-
         // POST api/<StringController>
         [HttpPost]
         public List<string> Post(string value)
@@ -23,7 +21,6 @@ namespace gitApiProject.Controllers
             MyStrings.s.Add(value);
             return MyStrings.s;
         }
-
     }
 }
 
