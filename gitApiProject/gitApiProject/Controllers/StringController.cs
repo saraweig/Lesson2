@@ -9,9 +9,9 @@ namespace gitApiProject.Controllers
     {
         // GET: api/<StringController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<string> Get()
         {
-            return new string[] { "sariWeig", "miniDzaldov" };
+            return MyStrings.s;
         }
         // DELETE api/<StringController>/5
         [HttpDelete("{str}")]
